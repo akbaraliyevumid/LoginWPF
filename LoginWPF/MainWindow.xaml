@@ -65,6 +65,14 @@
                     FontSize="17"
                     FontWeight="SemiBold"
                     Text="Log in to your existing account" />
+
+                <TextBox Margin="0 50 0 0" x:Name="txtUSername" Width="300" FontSize="18" materialDesign:HintAssist.Hint="Enter Username"
+                         BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}"
+                         Style="{StaticResource MaterialDesignOutlinedTextBox}"/>
+                <PasswordBox Margin="0 20 0 0" x:Name="txtPassword" Width="300" FontSize="18"
+                             materialDesign:HintAssist.Hint="Enter Password"
+                             BorderBrush="{DynamicResource MaterialDesignDivider}"
+                             Style="{StaticResource MaterialDesignOutlinedPasswordBox}"/>
             </StackPanel>
         </materialDesign:DialogHost>
     </materialDesign:Card>
