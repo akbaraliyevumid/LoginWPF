@@ -1,5 +1,6 @@
 ﻿using MaterialDesignThemes.Wpf;
 using System.Windows;
+using System.Windows.Input;
 
 namespace LoginWPF
 {
@@ -35,6 +36,13 @@ namespace LoginWPF
 
         private void exit_tbn_Click(object sender, RoutedEventArgs e)
         {
+            Application.Current.Shutdown();
+        }
+
+        protected override void OnMouseLeftButtonDown(MouseButtonEventArgs e)
+        {
+            base.OnMouseLeftButtonDown(e);
+            DragMove();
         }
     }
 }
