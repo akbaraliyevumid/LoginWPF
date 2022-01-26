@@ -8,14 +8,64 @@
     Title="MainWindow"
     Width="450"
     Height="760"
-    TextElement.Foreground="{DynamicResource MaterialDesignBody}"
-    mc:Ignorable="d"
-    Background="{x:Null}"
     AllowsTransparency="True"
+    Background="{x:Null}"
+    TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+    WindowStartupLocation="CenterScreen"
     WindowStyle="None"
-    WindowStartupLocation="CenterScreen">
+    mc:Ignorable="d">
     <materialDesign:Card
         Margin="25"
         Background="{DynamicResource MaterialDesignPaper}"
-        UniformCornerRadius="15" />
+        UniformCornerRadius="15">
+        <materialDesign:DialogHost x:Name="DialogHost" CloseOnClickAway="True">
+            <StackPanel>
+                <materialDesign:PopupBox
+                    Height="25"
+                    Margin="0,20,20,0"
+                    HorizontalAlignment="Right"
+                    PlacementMode="BottomAndAlignRightEdges"
+                    StaysOpen="False">
+                    <StackPanel
+                        Margin="16,10,0,6"
+                        HorizontalAlignment="Center"
+                        Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center" Text="Dark Mode" />
+                        <ToggleButton
+                            x:Name="themeToggle"
+                            Margin="12,0,8,0"
+                            Click="themeToggle_Click"
+                            Cursor="Hand"
+                            IsChecked="{Binding IsDarkTheme}"
+                            ToolTip="Enable Dark Mode" />
+                        <Button
+                            Margin="0,8,0,0"
+                            Content="Help Me"
+                            ToolTip="Having Trouble Loggin In?" />
+                        <Button
+                            x:Name="exit_tbn"
+                            Click="exit_tbn_Click"
+                            Content="Exit application"
+                            ToolTip="Close application" />
+
+                    </StackPanel>
+                </materialDesign:PopupBox>
+                <Image
+                    Height="100"
+                    Margin="0,60,0,5"
+                    Source="skype.png" />
+                <TextBlock
+                    Margin="0,25,0,5"
+                    HorizontalAlignment="Center"
+                    FontSize="28"
+                    FontWeight="Bold"
+                    Text="Welcome Back" />
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    FontSize="17"
+                    FontWeight="SemiBold"
+                    Text="Log in to your existing account" />
+            </StackPanel>
+        </materialDesign:DialogHost>
+    </materialDesign:Card>
 </Window>

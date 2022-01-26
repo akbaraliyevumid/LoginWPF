@@ -24,5 +24,15 @@ namespace LoginWPF
         {
             InitializeComponent();
         }
+
+        private void themeToggle_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void exit_tbn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
